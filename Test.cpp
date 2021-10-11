@@ -19,10 +19,10 @@ union MyUn
 }u;
 void Menu(void)
 {
-	cout << "\n1 - ãîäîâùèíà ñâàäüáû";
-	cout << "\n2 - Âûñîêîñòíûé ëè ãîä";
-	cout << "\n3 - Ëóííîå ÷èñëî òåêóùåãî ãîäà";
-	cout << "\n4 - âûõîä";
+	cout << "\n1 - Ð³Ð¾Ð´Ð¾Ð²Ñ‰Ð¸Ð½Ð° ÑÐ²Ð°Ð´ÑŒÐ±Ñ‹";
+	cout << "\n2 - Ã‚Ã»Ã±Ã®ÃªÃ®Ã±Ã²Ã­Ã»Ã© Ã«Ã¨ Ã£Ã®Ã¤";
+	cout << "\n3 - Ã‹Ã³Ã­Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã® Ã²Ã¥ÃªÃ³Ã¹Ã¥Ã£Ã® Ã£Ã®Ã¤Ã ";
+	cout << "\n4 - Ã¢Ã»ÃµÃ®Ã¤";
 
  }
 
@@ -46,10 +46,10 @@ void WeddingAnniversary(one_year year)
 	switch (y)
 	{
 	case Weddings::sitcevaya:
-		cout << endl << y << " - Ñèòöåâàÿ ñâàäüáà";
+		cout << endl << y << " - Ã‘Ã¨Ã²Ã¶Ã¥Ã¢Ã Ã¿ Ã±Ã¢Ã Ã¤Ã¼Ã¡Ã ";
 		break;
 	default:
-		cout << "Íåò òàêîé ñâàäüáû";
+		cout << "ÃÃ¥Ã² Ã²Ã ÃªÃ®Ã© Ã±Ã¢Ã Ã¤Ã¼Ã¡Ã»";
 	}
 }
 bool IsLeapYear(one_year year)
@@ -71,28 +71,28 @@ int main()
 	{
 		system("cls");
 		Menu();
-		Input("Âûáåðåòå ïóíêò ìåíþ: ", u.menu);
+		Input("Ã‚Ã»Ã¡Ã¥Ã°Ã¥Ã²Ã¥ Ã¯Ã³Ã­ÃªÃ² Ã¬Ã¥Ã­Ã¾: ", u.menu);
 		switch (u.menu)
 		{
 		case 1:
-			Input("\nÂâåäèòå ãîä: ", u.year);
+			Input("\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã£Ã®Ã¤: ", u.year);
 			WeddingAnniversary(u.year);
 			break;
 		case 2:
-			Input("\nÂâåäèòå ãîä: ", u.year);
+			Input("\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã£Ã®Ã¤: ", u.year);
 			if (IsLeapYear(u.year))
-				cout << u.year << "Âèñîêîñíûé ãîä";
+				cout << u.year << "Ã‚Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã© Ã£Ã®Ã¤";
 			else
-				cout << u.year << "Íåâèñîêîñíûé ãîä";
+				cout << u.year << "ÃÃ¥Ã¢Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã© Ã£Ã®Ã¤";
 			break;
 		case 3:
-			Input("\nÂâåäèòå ãîä: ", u.year);
-			cout << "\nËóííîå ÷èñëî" << u.year << "ãîäà:" << MoonNum(u.year);
+			Input("\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã£Ã®Ã¤: ", u.year);
+			cout << "\nÃ‹Ã³Ã­Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®" << u.year << "Ã£Ã®Ã¤Ã :" << MoonNum(u.year);
 			break;
 		case 4:
 			return 0;
 		default:
-			cout << "\nÍåâåðíûé ïóíêò ìåíþ";
+			cout << "\nÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã¯Ã³Ã­ÃªÃ² Ã¬Ã¥Ã­Ã¾";
 		}
 		cout << endl;
 		system("pause");
